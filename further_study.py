@@ -16,7 +16,7 @@ def custom_len(input_list):
 
     """
 
-    return 0
+    return(len(input_list))
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -43,7 +43,8 @@ def custom_append(input_list, value):
         True
 
     """
-
+    #input_list.append(value) also works 
+    input_list.append("Re")
     pass
 
 
@@ -62,7 +63,8 @@ def custom_extend(input_list, second_list):
         True
 
     """
-
+    input_list.extend(second_list)
+    
     pass
 
 
@@ -80,7 +82,7 @@ def custom_insert(input_list, index, value):
         True
 
     """
-
+    input_list.insert(1,value)
     pass
 
 
@@ -99,7 +101,9 @@ def custom_remove(input_list, value):
         True
 
     """
+    "del input_list[0] also works" 
 
+    input_list.remove(value)
     pass
 
 
@@ -116,10 +120,10 @@ def custom_pop(input_list):
         'March'
         >>> months
         ['Jan', 'Feb']
-
     """
-
-    return None
+    
+    x = input_list.pop()
+    return x
 
 
 def custom_index(input_list, value):
@@ -134,8 +138,9 @@ def custom_index(input_list, value):
         1
 
     """
-
-    return 0
+    x = input_list.index(value) 
+    return x
+    
 
 
 def custom_count(input_list, value):
@@ -150,8 +155,8 @@ def custom_count(input_list, value):
         2
 
     """
-
-    return 0
+    count = input_list.count(value)
+    return count
 
 
 def custom_reverse(input_list):
@@ -169,7 +174,7 @@ def custom_reverse(input_list):
         True
 
     """
-
+    input_list.reverse()
     pass
 
 
@@ -189,8 +194,11 @@ def custom_contains(input_list, value):
         True
 
     """
-
-    return None
+    for x in input_list:
+        if x == value:
+            return True
+        
+    return
 
 
 def custom_equality(some_list, another_list):
